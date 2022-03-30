@@ -6,7 +6,7 @@
 //
 import UIKit
 
-class ProfileVC: ViewController {
+class ProfileVC: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()

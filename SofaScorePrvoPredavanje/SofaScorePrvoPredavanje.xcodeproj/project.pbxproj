@@ -9,23 +9,28 @@
 /* Begin PBXBuildFile section */
 		5F8459CB27DA46C400700029 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F8459CA27DA46C400700029 /* AppDelegate.swift */; };
 		5F8459CD27DA46C400700029 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F8459CC27DA46C400700029 /* SceneDelegate.swift */; };
-		5F8459CF27DA46C400700029 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F8459CE27DA46C400700029 /* ViewController.swift */; };
 		5F8459D427DA46C400700029 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5F8459D327DA46C400700029 /* Assets.xcassets */; };
 		5F8459D727DA46C400700029 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5F8459D527DA46C400700029 /* LaunchScreen.storyboard */; };
 		5F8459DF27DA4AA800700029 /* SearchVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F8459DE27DA4AA700700029 /* SearchVC.swift */; };
 		5F8459E127DA4AB400700029 /* ProfileVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F8459E027DA4AB400700029 /* ProfileVC.swift */; };
+		5F9160DE27F33A41009FBD63 /* SnapKit in Frameworks */ = {isa = PBXBuildFile; productRef = 5F9160DD27F33A41009FBD63 /* SnapKit */; };
+		5F9160E027F33A9E009FBD63 /* UIView+Extenstion.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F9160DF27F33A9E009FBD63 /* UIView+Extenstion.swift */; };
+		5F9160E227F33ABD009FBD63 /* SofaButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F9160E127F33ABD009FBD63 /* SofaButton.swift */; };
+		5FE0E57727F4E0B0007DF145 /* SofaTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5FE0E57627F4E0B0007DF145 /* SofaTextField.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		5F8459C727DA46C400700029 /* SofaScorePrvoPredavanje.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SofaScorePrvoPredavanje.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		5F8459CA27DA46C400700029 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		5F8459CC27DA46C400700029 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		5F8459CE27DA46C400700029 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		5F8459D327DA46C400700029 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		5F8459D627DA46C400700029 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		5F8459D827DA46C400700029 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		5F8459DE27DA4AA700700029 /* SearchVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchVC.swift; sourceTree = "<group>"; };
 		5F8459E027DA4AB400700029 /* ProfileVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileVC.swift; sourceTree = "<group>"; };
+		5F9160DF27F33A9E009FBD63 /* UIView+Extenstion.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+Extenstion.swift"; sourceTree = "<group>"; };
+		5F9160E127F33ABD009FBD63 /* SofaButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SofaButton.swift; sourceTree = "<group>"; };
+		5FE0E57627F4E0B0007DF145 /* SofaTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SofaTextField.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -33,6 +38,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5F9160DE27F33A41009FBD63 /* SnapKit in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -58,16 +64,34 @@
 		5F8459C927DA46C400700029 /* SofaScorePrvoPredavanje */ = {
 			isa = PBXGroup;
 			children = (
-				5F8459CA27DA46C400700029 /* AppDelegate.swift */,
-				5F8459CC27DA46C400700029 /* SceneDelegate.swift */,
-				5F8459CE27DA46C400700029 /* ViewController.swift */,
-				5F8459DE27DA4AA700700029 /* SearchVC.swift */,
-				5F8459E027DA4AB400700029 /* ProfileVC.swift */,
-				5F8459D327DA46C400700029 /* Assets.xcassets */,
-				5F8459D527DA46C400700029 /* LaunchScreen.storyboard */,
+				5F9160E427F341FF009FBD63 /* initalization */,
+				5F9160E327F341DC009FBD63 /* ViewControllers */,
+				5F9160DF27F33A9E009FBD63 /* UIView+Extenstion.swift */,
+				5F9160E127F33ABD009FBD63 /* SofaButton.swift */,
+				5FE0E57627F4E0B0007DF145 /* SofaTextField.swift */,
 				5F8459D827DA46C400700029 /* Info.plist */,
 			);
 			path = SofaScorePrvoPredavanje;
+			sourceTree = "<group>";
+		};
+		5F9160E327F341DC009FBD63 /* ViewControllers */ = {
+			isa = PBXGroup;
+			children = (
+				5F8459DE27DA4AA700700029 /* SearchVC.swift */,
+				5F8459E027DA4AB400700029 /* ProfileVC.swift */,
+			);
+			path = ViewControllers;
+			sourceTree = "<group>";
+		};
+		5F9160E427F341FF009FBD63 /* initalization */ = {
+			isa = PBXGroup;
+			children = (
+				5F8459CA27DA46C400700029 /* AppDelegate.swift */,
+				5F8459CC27DA46C400700029 /* SceneDelegate.swift */,
+				5F8459D527DA46C400700029 /* LaunchScreen.storyboard */,
+				5F8459D327DA46C400700029 /* Assets.xcassets */,
+			);
+			path = initalization;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -86,6 +110,9 @@
 			dependencies = (
 			);
 			name = SofaScorePrvoPredavanje;
+			packageProductDependencies = (
+				5F9160DD27F33A41009FBD63 /* SnapKit */,
+			);
 			productName = SofaScorePrvoPredavanje;
 			productReference = 5F8459C727DA46C400700029 /* SofaScorePrvoPredavanje.app */;
 			productType = "com.apple.product-type.application";
@@ -114,6 +141,9 @@
 				Base,
 			);
 			mainGroup = 5F8459BE27DA46C400700029;
+			packageReferences = (
+				5F9160DC27F33A41009FBD63 /* XCRemoteSwiftPackageReference "SnapKit" */,
+			);
 			productRefGroup = 5F8459C827DA46C400700029 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -141,8 +171,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				5F8459E127DA4AB400700029 /* ProfileVC.swift in Sources */,
+				5F9160E027F33A9E009FBD63 /* UIView+Extenstion.swift in Sources */,
 				5F8459DF27DA4AA800700029 /* SearchVC.swift in Sources */,
-				5F8459CF27DA46C400700029 /* ViewController.swift in Sources */,
+				5F9160E227F33ABD009FBD63 /* SofaButton.swift in Sources */,
+				5FE0E57727F4E0B0007DF145 /* SofaTextField.swift in Sources */,
 				5F8459CB27DA46C400700029 /* AppDelegate.swift in Sources */,
 				5F8459CD27DA46C400700029 /* SceneDelegate.swift in Sources */,
 			);
@@ -356,6 +388,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		5F9160DC27F33A41009FBD63 /* XCRemoteSwiftPackageReference "SnapKit" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/SnapKit/SnapKit.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 5.0.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		5F9160DD27F33A41009FBD63 /* SnapKit */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 5F9160DC27F33A41009FBD63 /* XCRemoteSwiftPackageReference "SnapKit" */;
+			productName = SnapKit;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 5F8459BF27DA46C400700029 /* Project object */;
 }
