@@ -28,20 +28,43 @@ class SearchVC: UIViewController {
         view.addSubviews(myCoolButton, customTextField, imageView)
     }
     
-    private func createDismissKeyboardTapGesture() {
-        let tapGestureRecognizer = UITapGestureRecognizer(target: self.view, action: #selector(UIView.endEditing))
-        view.addGestureRecognizer(tapGestureRecognizer)
-    }
-    
     private func pushVC() {
         guard let playerName = customTextField.text,
               !playerName.isEmpty else {
             
-            let emptyTextFieldAlert = UIAlertController(title: "this can't be empty", message: "", preferredStyle: .alert)
-            let action = UIAlertAction(title: "dismiss", style: .destructive)
+            let emptytextFieldAlertController = UIAlertController(title: "Empty Player Name", message: "Please enter player's name. We need to know who to look for 😀.", preferredStyle: .alert)
+            let dismissAction = UIAlertAction(title: "OK", style: .cancel)
+            emptytextFieldAlertController.view.tintColor = .red
+            emptytextFieldAlertController.addAction(dismissAction)
+            self.present(emptytextFieldAlertController, animated: true, completion:{})
             
-            emptyTextFieldAlert.addAction(action)
-            present(emptyTextFieldAlert, animated: true, completion: nil)
+                                              
+//            let emptytextFieldAlertController = UIAlertController(title: "\n\n\n\n\n\n", message: nil, preferredStyle: .actionSheet)
+//
+//            let margin:CGFloat = 10.0
+//            let rect = CGRect(x: margin, y: margin, width: emptytextFieldAlertController.view.bounds.size.width - margin * 4.0, height: 120)
+//            let customView = UIView(frame: rect)
+//            let titleLabel = UILabel(frame: CGRect(x: 0, y: 0, width: emptytextFieldAlertController.view.bounds.size.width - 20, height: 21))
+//            let subtitleLabel = UILabel(frame: CGRect(x: 0, y: 0, width: emptytextFieldAlertController.view.bounds.size.width - 20, height: 16))
+//            
+//            titleLabel.textAlignment = .center
+//            titleLabel.text = "Empty Player Name"
+//            titleLabel.font = .systemFont(ofSize: 20, weight: .bold)
+//            
+//            subtitleLabel.textAlignment = .center
+//            subtitleLabel.text = "Please Enter player's name. We need to know who to look for 😀."
+//            subtitleLabel.font = .systemFont(ofSize: 15, weight: .light)
+//            
+//            
+//            customView.addSubviews(titleLabel, subtitleLabel)
+//            
+//            emptytextFieldAlertController.view.addSubview(customView)
+//
+//            let cancelAction = UIAlertAction(title: "OK", style: .cancel, handler: {(alert: UIAlertAction!) in print("cancel")})
+//
+//            emptytextFieldAlertController.addAction(cancelAction)
+//
+//            self.present(emptytextFieldAlertController, animated: true, completion:{})
             
             return
         }
@@ -63,6 +86,7 @@ class SearchVC: UIViewController {
     }
     
     private func setupConstraints() {
+        
         imageView.snp.makeConstraints { 
             $0.top.equalToSuperview().offset(100)
             $0.width.height.equalTo(50)
@@ -91,8 +115,12 @@ class SearchVC: UIViewController {
 extension SearchVC: UITextFieldDelegate {
     
     func textFieldShouldReturn(_ textField: UITextField) -> Bool {
-        print("tapped return")
         pushVC()
         return true
+    }
+    
+    func createDismissKeyboardTapGesture() {
+        let tapGestureRecognizer = UITapGestureRecognizer(target: self.view, action: #selector(UIView.endEditing))
+        view.addGestureRecognizer(tapGestureRecognizer)
     }
 }
