@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		5F01CE0727FB6B130028E3D0 /* SofaCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F01CE0627FB6B130028E3D0 /* SofaCell.swift */; };
 		5F8459CB27DA46C400700029 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F8459CA27DA46C400700029 /* AppDelegate.swift */; };
 		5F8459CD27DA46C400700029 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F8459CC27DA46C400700029 /* SceneDelegate.swift */; };
 		5F8459D427DA46C400700029 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5F8459D327DA46C400700029 /* Assets.xcassets */; };
@@ -20,6 +21,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		5F01CE0627FB6B130028E3D0 /* SofaCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SofaCell.swift; sourceTree = "<group>"; };
 		5F8459C727DA46C400700029 /* SofaScorePrvoPredavanje.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SofaScorePrvoPredavanje.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		5F8459CA27DA46C400700029 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		5F8459CC27DA46C400700029 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -45,6 +47,16 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		5F01CE0827FB70D00028E3D0 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				5F01CE0627FB6B130028E3D0 /* SofaCell.swift */,
+				5F9160E127F33ABD009FBD63 /* SofaButton.swift */,
+				5FE0E57627F4E0B0007DF145 /* SofaTextField.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
 		5F8459BE27DA46C400700029 = {
 			isa = PBXGroup;
 			children = (
@@ -67,8 +79,7 @@
 				5F9160E427F341FF009FBD63 /* initalization */,
 				5F9160E327F341DC009FBD63 /* ViewControllers */,
 				5F9160DF27F33A9E009FBD63 /* UIView+Extenstion.swift */,
-				5F9160E127F33ABD009FBD63 /* SofaButton.swift */,
-				5FE0E57627F4E0B0007DF145 /* SofaTextField.swift */,
+				5F01CE0827FB70D00028E3D0 /* Views */,
 				5F8459D827DA46C400700029 /* Info.plist */,
 			);
 			path = SofaScorePrvoPredavanje;
@@ -172,6 +183,7 @@
 			files = (
 				5F8459E127DA4AB400700029 /* ProfileVC.swift in Sources */,
 				5F9160E027F33A9E009FBD63 /* UIView+Extenstion.swift in Sources */,
+				5F01CE0727FB6B130028E3D0 /* SofaCell.swift in Sources */,
 				5F8459DF27DA4AA800700029 /* SearchVC.swift in Sources */,
 				5F9160E227F33ABD009FBD63 /* SofaButton.swift in Sources */,
 				5FE0E57727F4E0B0007DF145 /* SofaTextField.swift in Sources */,
