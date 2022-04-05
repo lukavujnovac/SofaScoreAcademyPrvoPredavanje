@@ -38,7 +38,7 @@ class SofaButton: UIButton {
     }
     
     @objc func buttonAction(sender: UIButton!) {
-//        print("pressed")
+        //
     }
 }
 

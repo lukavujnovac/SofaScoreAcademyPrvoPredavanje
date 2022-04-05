@@ -6,9 +6,10 @@
 //
 import UIKit
 import SnapKit
+import SwiftUI
+//import SwiftUI
 
 class ProfileVC: UITableViewController {
-    
     private let cellId = "id"
     
     private let textMessages = MockData.textMessages
@@ -17,6 +18,7 @@ class ProfileVC: UITableViewController {
         super.viewDidLoad()
         view.backgroundColor = .systemBackground
         navigationItem.title = "Poruke"
+        navigationItem.rightBarButtonItem = UIBarButtonItem(barButtonSystemItem: .add, target: self, action: #selector(didTapButton))
         navigationController?.navigationBar.prefersLargeTitles = true
         
         tableView.register(SofaCell.self, forCellReuseIdentifier: cellId)
@@ -69,6 +71,10 @@ class ProfileVC: UITableViewController {
         
         return cell
     }
+    @objc func didTapButton() {
+        let vc = UIHostingController(rootView: SofaListView())
+        present(vc, animated: true)
+    }   
 }
 
 

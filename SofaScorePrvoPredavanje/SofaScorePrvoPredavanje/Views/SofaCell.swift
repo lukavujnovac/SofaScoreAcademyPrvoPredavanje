@@ -48,8 +48,7 @@ class SofaCell: UITableViewCell {
     }
     
     private func addViews() {
-        addSubview(bubbleBackgroundView)
-        addSubview(messageLabel)
+        addSubviews(bubbleBackgroundView, messageLabel)
     }
     
     private func styleViews() {
