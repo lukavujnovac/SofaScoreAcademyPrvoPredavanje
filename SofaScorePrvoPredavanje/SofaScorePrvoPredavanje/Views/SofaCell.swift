@@ -6,14 +6,37 @@
 //
 
 import UIKit
+import SnapKit
 
 class SofaCell: UITableViewCell {
 
     let messageLabel = UILabel()
     let bubbleBackgroundView = UIView()
     
+    var leadingConstraint: Constraint?
+    var trailingConstraint: Constraint?
+    
+    var chatMessage: ChatMessage! {
+        didSet{
+            bubbleBackgroundView.backgroundColor = chatMessage.isIncoming ? .white : .darkGray
+            messageLabel.textColor = chatMessage.isIncoming ? .black : .white
+            
+            messageLabel.text = chatMessage.text
+            
+            if chatMessage.isIncoming {
+                leadingConstraint?.activate()
+                trailingConstraint?.deactivate()
+            } else {
+                leadingConstraint?.deactivate()
+                trailingConstraint?.activate()
+            }
+        }
+    }
+    
     override init(style: UITableViewCell.CellStyle, reuseIdentifier: String?) {
         super.init(style: style, reuseIdentifier: reuseIdentifier)
+        
+        backgroundColor = .clear
         
         addViews()
         styleViews()
@@ -30,7 +53,7 @@ class SofaCell: UITableViewCell {
     }
     
     private func styleViews() {
-        bubbleBackgroundView.backgroundColor = .systemGreen
+        bubbleBackgroundView.backgroundColor = .yellow
         bubbleBackgroundView.layer.cornerRadius = 15
         
         messageLabel.numberOfLines = 0
@@ -40,8 +63,9 @@ class SofaCell: UITableViewCell {
         messageLabel.snp.makeConstraints { 
             $0.top.equalToSuperview().offset(32)
             $0.bottom.equalToSuperview().offset(-16)
-            $0.leading.equalToSuperview().offset(32)
-            $0.width.equalTo(250)
+            $0.width.lessThanOrEqualTo(250)
+            leadingConstraint = $0.leading.equalToSuperview().offset(32).constraint
+            trailingConstraint = $0.trailing.equalToSuperview().offset(-32).constraint
         }
         
         bubbleBackgroundView.snp.makeConstraints {  

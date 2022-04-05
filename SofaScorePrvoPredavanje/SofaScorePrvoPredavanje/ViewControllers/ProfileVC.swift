@@ -7,11 +7,20 @@
 import UIKit
 import SnapKit
 
+struct ChatMessage {
+    let text: String
+    let isIncoming: Bool
+}
+
 class ProfileVC: UITableViewController {
     
     private let cellId = "id"
-    let textMessages: [String] = ["here is my first message", "I will message another long message that will word wrap", "I will message another long message that will word wrap I will message another long message that will word wrap"]
     
+    let textMessages: [ChatMessage] = [
+        ChatMessage(text: "here is my first message", isIncoming: false),
+        ChatMessage(text: "I will message another long message that will word wrap", isIncoming: true),
+        ChatMessage(text: "I will message another long message that will word wrap I will message another long message that will word wrap", isIncoming: true)
+    ]    
     override func viewDidLoad() {
         super.viewDidLoad()
         view.backgroundColor = .systemBackground
@@ -21,6 +30,7 @@ class ProfileVC: UITableViewController {
         tableView.register(SofaCell.self, forCellReuseIdentifier: cellId)
         
         tableView.separatorStyle = .none
+        tableView.backgroundColor = UIColor(white: 0.95, alpha: 1)
         
     }
     
@@ -30,9 +40,9 @@ class ProfileVC: UITableViewController {
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: cellId, for: indexPath) as! SofaCell
-//        cell.textLabel?.text = "kdsjfld"
-//        cell.textLabel?.numberOfLines = 0
-        cell.messageLabel.text = textMessages[indexPath.row]
+        let chatMessage = textMessages[indexPath.row]
+        
+        cell.chatMessage = chatMessage
         
         return cell
     }
