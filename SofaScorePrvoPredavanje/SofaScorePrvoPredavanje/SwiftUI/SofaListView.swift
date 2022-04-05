@@ -28,7 +28,7 @@ struct SofaListView: View {
                 .keyboardType(.numberPad)
                 .padding(.vertical, 20)
             
-            Button("SCROLL NOW") {
+            Button("Odvedi me") {
                 withAnimation(.default) {
                     if let index = Int(textFieldText) {
                         scrollToIndex = index
