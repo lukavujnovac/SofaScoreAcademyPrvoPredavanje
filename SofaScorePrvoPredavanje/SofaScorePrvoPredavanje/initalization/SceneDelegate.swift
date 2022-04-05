@@ -42,7 +42,7 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
     func crateProfileNavigationViewController() -> UINavigationController {
         let profileVC = ProfileVC()
         profileVC.title = "Profile"
-        profileVC.tabBarItem = UITabBarItem(tabBarSystemItem: .bookmarks, tag: 0)
+        profileVC.tabBarItem = UITabBarItem(tabBarSystemItem: .downloads, tag: 0)
         
         return UINavigationController(rootViewController: profileVC)
     }

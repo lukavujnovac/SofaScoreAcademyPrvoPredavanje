@@ -18,8 +18,8 @@ class SofaCell: UITableViewCell {
     
     var chatMessage: ChatMessage! {
         didSet{
-            bubbleBackgroundView.backgroundColor = chatMessage.isIncoming ? .white : .darkGray
-            messageLabel.textColor = chatMessage.isIncoming ? .black : .white
+            bubbleBackgroundView.backgroundColor = chatMessage.isIncoming ? .systemBlue : .systemGreen
+            messageLabel.textColor = .white
             
             messageLabel.text = chatMessage.text
             
@@ -61,8 +61,8 @@ class SofaCell: UITableViewCell {
     
     private func setUpConstraints() {
         messageLabel.snp.makeConstraints { 
-            $0.top.equalToSuperview().offset(32)
-            $0.bottom.equalToSuperview().offset(-16)
+            $0.top.equalToSuperview().offset(16)
+            $0.bottom.equalToSuperview().offset(-32)
             $0.width.lessThanOrEqualTo(250)
             leadingConstraint = $0.leading.equalToSuperview().offset(32).constraint
             trailingConstraint = $0.trailing.equalToSuperview().offset(-32).constraint

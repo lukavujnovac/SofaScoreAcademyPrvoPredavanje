@@ -7,20 +7,12 @@
 import UIKit
 import SnapKit
 
-struct ChatMessage {
-    let text: String
-    let isIncoming: Bool
-}
-
 class ProfileVC: UITableViewController {
     
     private let cellId = "id"
     
-    let textMessages: [ChatMessage] = [
-        ChatMessage(text: "here is my first message", isIncoming: false),
-        ChatMessage(text: "I will message another long message that will word wrap", isIncoming: true),
-        ChatMessage(text: "I will message another long message that will word wrap I will message another long message that will word wrap", isIncoming: true)
-    ]    
+    private let textMessages = MockData.textMessages
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         view.backgroundColor = .systemBackground
@@ -30,20 +22,54 @@ class ProfileVC: UITableViewController {
         tableView.register(SofaCell.self, forCellReuseIdentifier: cellId)
         
         tableView.separatorStyle = .none
-        tableView.backgroundColor = UIColor(white: 0.95, alpha: 1)
+        tableView.backgroundColor = UIColor(white: 0.95, alpha: 1)   
+    }
+    
+    override func numberOfSections(in tableView: UITableView) -> Int {
+        return textMessages.count
+    }
+    
+    override func tableView(_ tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
+        if let firstMessageInSection = textMessages[section].first {
+            let dateFormatter = DateFormatter()
+            dateFormatter.dateFormat = "dd/MM/yyyy"
+            let dateString = dateFormatter.string(from: firstMessageInSection.date)
+            
+            let label = DateHeaderLabel()
+            label.text = dateString
+
+            let containerView = UIView()
+            
+            containerView.addSubview(label)
+            
+            label.snp.makeConstraints { 
+                $0.centerX.equalTo(containerView.snp.centerX)
+                $0.centerY.equalTo(containerView.snp.centerY)
+            }
+            
+            return containerView
+        }
         
+        return nil
+    }
+    
+    override func tableView(_ tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat {
+        return 50
     }
     
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return textMessages.count
+        return textMessages[section].count
     }
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: cellId, for: indexPath) as! SofaCell
-        let chatMessage = textMessages[indexPath.row]
+        let chatMessage = textMessages[indexPath.section][indexPath.row]
         
         cell.chatMessage = chatMessage
         
         return cell
     }
 }
+
+
+
