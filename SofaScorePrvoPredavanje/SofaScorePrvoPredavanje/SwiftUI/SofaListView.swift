@@ -16,7 +16,7 @@ struct SofaListView: View {
             
             TextField("", text: $textFieldText)
                 .placeholder(when: textFieldText.isEmpty) {
-                    Text("unesi # ovdje")
+                    Text("unesi # izmedu 0 i 99 ovdje")
                         .foregroundColor(.secondary)
                 }
                 .padding()

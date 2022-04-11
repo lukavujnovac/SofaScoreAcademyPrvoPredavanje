@@ -60,6 +60,7 @@
 		5F01CE0827FB70D00028E3D0 /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				5F3790E227FCBED600AA9CAC /* DateHeaderLabel.swift */,
 				5F01CE0627FB6B130028E3D0 /* SofaCell.swift */,
 				5F9160E127F33ABD009FBD63 /* SofaButton.swift */,
 				5FE0E57627F4E0B0007DF145 /* SofaTextField.swift */,
@@ -80,7 +81,6 @@
 			isa = PBXGroup;
 			children = (
 				5F3790E027FCBEC300AA9CAC /* ChatMessage.swift */,
-				5F3790E227FCBED600AA9CAC /* DateHeaderLabel.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
