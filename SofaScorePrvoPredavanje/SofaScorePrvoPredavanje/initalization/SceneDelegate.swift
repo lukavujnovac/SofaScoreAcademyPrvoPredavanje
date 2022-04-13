@@ -25,7 +25,7 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
     
     func createTabBar() -> UITabBarController {
         let tabBar = UITabBarController()
-        tabBar.viewControllers = [createSearchNavigationViewController(), crateProfileNavigationViewController()]
+        tabBar.viewControllers = [createSearchNavigationViewController(), crateProfileNavigationViewController(), createUserSearchNavigationViewController()]
         tabBar.tabBar.tintColor = .systemPink
         
         return tabBar
@@ -45,6 +45,14 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         profileVC.tabBarItem = UITabBarItem(tabBarSystemItem: .downloads, tag: 0)
         
         return UINavigationController(rootViewController: profileVC)
+    }
+    
+    func createUserSearchNavigationViewController() -> UINavigationController {
+        let userSearchVC = UserSearchVC()
+        userSearchVC.title = "Github Jobs"
+        userSearchVC.tabBarItem = UITabBarItem(tabBarSystemItem: .more, tag: 0)
+        
+        return UINavigationController(rootViewController: userSearchVC)
     }
 
     func sceneDidDisconnect(_ scene: UIScene) {

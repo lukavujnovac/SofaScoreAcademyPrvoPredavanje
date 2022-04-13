@@ -7,12 +7,19 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		5F005D592806280F00BCCA1E /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F005D582806280F00BCCA1E /* User.swift */; };
+		5F005D5D280628BF00BCCA1E /* ErrorMessage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F005D5C280628BF00BCCA1E /* ErrorMessage.swift */; };
+		5F005D5F2806296800BCCA1E /* NetworkService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F005D5E2806296800BCCA1E /* NetworkService.swift */; };
 		5F01CE0727FB6B130028E3D0 /* SofaCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F01CE0627FB6B130028E3D0 /* SofaCell.swift */; };
 		5F3790DC27FCBCD400AA9CAC /* MockData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F3790DB27FCBCD400AA9CAC /* MockData.swift */; };
 		5F3790DE27FCBD3400AA9CAC /* DataServiceProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F3790DD27FCBD3400AA9CAC /* DataServiceProtocol.swift */; };
 		5F3790E127FCBEC300AA9CAC /* ChatMessage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F3790E027FCBEC300AA9CAC /* ChatMessage.swift */; };
 		5F3790E327FCBED600AA9CAC /* DateHeaderLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F3790E227FCBED600AA9CAC /* DateHeaderLabel.swift */; };
 		5F3790E827FCC28B00AA9CAC /* SofaListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F3790E727FCC28B00AA9CAC /* SofaListView.swift */; };
+		5F3F53BE2805F586008F3943 /* NetworkVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F3F53BD2805F586008F3943 /* NetworkVC.swift */; };
+		5F3F53C02805F8AA008F3943 /* SearchViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F3F53BF2805F8AA008F3943 /* SearchViewCell.swift */; };
+		5F3F53C22806030A008F3943 /* UserDetailsVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F3F53C12806030A008F3943 /* UserDetailsVC.swift */; };
+		5F3F53C428060C0E008F3943 /* UILayoutHelpers+Extenstion.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F3F53C328060C0E008F3943 /* UILayoutHelpers+Extenstion.swift */; };
 		5F8459CB27DA46C400700029 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F8459CA27DA46C400700029 /* AppDelegate.swift */; };
 		5F8459CD27DA46C400700029 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F8459CC27DA46C400700029 /* SceneDelegate.swift */; };
 		5F8459D427DA46C400700029 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5F8459D327DA46C400700029 /* Assets.xcassets */; };
@@ -22,16 +29,25 @@
 		5F9160DE27F33A41009FBD63 /* SnapKit in Frameworks */ = {isa = PBXBuildFile; productRef = 5F9160DD27F33A41009FBD63 /* SnapKit */; };
 		5F9160E027F33A9E009FBD63 /* UIView+Extenstion.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F9160DF27F33A9E009FBD63 /* UIView+Extenstion.swift */; };
 		5F9160E227F33ABD009FBD63 /* SofaButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F9160E127F33ABD009FBD63 /* SofaButton.swift */; };
+		5FBFF9A828075EB4003FA41C /* UserSearchVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5FBFF9A728075EB4003FA41C /* UserSearchVC.swift */; };
+		5FBFF9AB280762B7003FA41C /* SDWebImage in Frameworks */ = {isa = PBXBuildFile; productRef = 5FBFF9AA280762B7003FA41C /* SDWebImage */; };
 		5FE0E57727F4E0B0007DF145 /* SofaTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5FE0E57627F4E0B0007DF145 /* SofaTextField.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		5F005D582806280F00BCCA1E /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
+		5F005D5C280628BF00BCCA1E /* ErrorMessage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ErrorMessage.swift; sourceTree = "<group>"; };
+		5F005D5E2806296800BCCA1E /* NetworkService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkService.swift; sourceTree = "<group>"; };
 		5F01CE0627FB6B130028E3D0 /* SofaCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SofaCell.swift; sourceTree = "<group>"; };
 		5F3790DB27FCBCD400AA9CAC /* MockData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockData.swift; sourceTree = "<group>"; };
 		5F3790DD27FCBD3400AA9CAC /* DataServiceProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataServiceProtocol.swift; sourceTree = "<group>"; };
 		5F3790E027FCBEC300AA9CAC /* ChatMessage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatMessage.swift; sourceTree = "<group>"; };
 		5F3790E227FCBED600AA9CAC /* DateHeaderLabel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DateHeaderLabel.swift; sourceTree = "<group>"; };
 		5F3790E727FCC28B00AA9CAC /* SofaListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SofaListView.swift; sourceTree = "<group>"; };
+		5F3F53BD2805F586008F3943 /* NetworkVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkVC.swift; sourceTree = "<group>"; };
+		5F3F53BF2805F8AA008F3943 /* SearchViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchViewCell.swift; sourceTree = "<group>"; };
+		5F3F53C12806030A008F3943 /* UserDetailsVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserDetailsVC.swift; sourceTree = "<group>"; };
+		5F3F53C328060C0E008F3943 /* UILayoutHelpers+Extenstion.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UILayoutHelpers+Extenstion.swift"; sourceTree = "<group>"; };
 		5F8459C727DA46C400700029 /* SofaScorePrvoPredavanje.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SofaScorePrvoPredavanje.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		5F8459CA27DA46C400700029 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		5F8459CC27DA46C400700029 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -42,6 +58,7 @@
 		5F8459E027DA4AB400700029 /* ProfileVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileVC.swift; sourceTree = "<group>"; };
 		5F9160DF27F33A9E009FBD63 /* UIView+Extenstion.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+Extenstion.swift"; sourceTree = "<group>"; };
 		5F9160E127F33ABD009FBD63 /* SofaButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SofaButton.swift; sourceTree = "<group>"; };
+		5FBFF9A728075EB4003FA41C /* UserSearchVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserSearchVC.swift; sourceTree = "<group>"; };
 		5FE0E57627F4E0B0007DF145 /* SofaTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SofaTextField.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -50,6 +67,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5FBFF9AB280762B7003FA41C /* SDWebImage in Frameworks */,
 				5F9160DE27F33A41009FBD63 /* SnapKit in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -57,9 +75,27 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		5F005D5A2806289C00BCCA1E /* extensions */ = {
+			isa = PBXGroup;
+			children = (
+				5F9160DF27F33A9E009FBD63 /* UIView+Extenstion.swift */,
+				5F3F53C328060C0E008F3943 /* UILayoutHelpers+Extenstion.swift */,
+			);
+			path = extensions;
+			sourceTree = "<group>";
+		};
+		5F005D5B280628AE00BCCA1E /* Utillities */ = {
+			isa = PBXGroup;
+			children = (
+				5F005D5C280628BF00BCCA1E /* ErrorMessage.swift */,
+			);
+			path = Utillities;
+			sourceTree = "<group>";
+		};
 		5F01CE0827FB70D00028E3D0 /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				5F3F53BF2805F8AA008F3943 /* SearchViewCell.swift */,
 				5F3790E227FCBED600AA9CAC /* DateHeaderLabel.swift */,
 				5F01CE0627FB6B130028E3D0 /* SofaCell.swift */,
 				5F9160E127F33ABD009FBD63 /* SofaButton.swift */,
@@ -73,6 +109,7 @@
 			children = (
 				5F3790DB27FCBCD400AA9CAC /* MockData.swift */,
 				5F3790DD27FCBD3400AA9CAC /* DataServiceProtocol.swift */,
+				5F005D5E2806296800BCCA1E /* NetworkService.swift */,
 			);
 			path = DataServices;
 			sourceTree = "<group>";
@@ -81,6 +118,7 @@
 			isa = PBXGroup;
 			children = (
 				5F3790E027FCBEC300AA9CAC /* ChatMessage.swift */,
+				5F005D582806280F00BCCA1E /* User.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -112,9 +150,10 @@
 		5F8459C927DA46C400700029 /* SofaScorePrvoPredavanje */ = {
 			isa = PBXGroup;
 			children = (
+				5F005D5B280628AE00BCCA1E /* Utillities */,
 				5F9160E427F341FF009FBD63 /* initalization */,
 				5F9160E327F341DC009FBD63 /* ViewControllers */,
-				5F9160DF27F33A9E009FBD63 /* UIView+Extenstion.swift */,
+				5F005D5A2806289C00BCCA1E /* extensions */,
 				5F3790EA27FCC8FC00AA9CAC /* SwiftUI */,
 				5F3790E427FCBEEC00AA9CAC /* Models */,
 				5F3790DF27FCBE9500AA9CAC /* DataServices */,
@@ -129,6 +168,9 @@
 			children = (
 				5F8459DE27DA4AA700700029 /* SearchVC.swift */,
 				5F8459E027DA4AB400700029 /* ProfileVC.swift */,
+				5FBFF9A728075EB4003FA41C /* UserSearchVC.swift */,
+				5F3F53BD2805F586008F3943 /* NetworkVC.swift */,
+				5F3F53C12806030A008F3943 /* UserDetailsVC.swift */,
 			);
 			path = ViewControllers;
 			sourceTree = "<group>";
@@ -162,6 +204,7 @@
 			name = SofaScorePrvoPredavanje;
 			packageProductDependencies = (
 				5F9160DD27F33A41009FBD63 /* SnapKit */,
+				5FBFF9AA280762B7003FA41C /* SDWebImage */,
 			);
 			productName = SofaScorePrvoPredavanje;
 			productReference = 5F8459C727DA46C400700029 /* SofaScorePrvoPredavanje.app */;
@@ -193,6 +236,7 @@
 			mainGroup = 5F8459BE27DA46C400700029;
 			packageReferences = (
 				5F9160DC27F33A41009FBD63 /* XCRemoteSwiftPackageReference "SnapKit" */,
+				5FBFF9A9280762B7003FA41C /* XCRemoteSwiftPackageReference "SDWebImage" */,
 			);
 			productRefGroup = 5F8459C827DA46C400700029 /* Products */;
 			projectDirPath = "";
@@ -220,19 +264,27 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5F005D592806280F00BCCA1E /* User.swift in Sources */,
 				5F8459E127DA4AB400700029 /* ProfileVC.swift in Sources */,
 				5F9160E027F33A9E009FBD63 /* UIView+Extenstion.swift in Sources */,
 				5F01CE0727FB6B130028E3D0 /* SofaCell.swift in Sources */,
 				5F8459DF27DA4AA800700029 /* SearchVC.swift in Sources */,
 				5F3790DC27FCBCD400AA9CAC /* MockData.swift in Sources */,
 				5F3790E127FCBEC300AA9CAC /* ChatMessage.swift in Sources */,
+				5F3F53C428060C0E008F3943 /* UILayoutHelpers+Extenstion.swift in Sources */,
+				5F3F53C02805F8AA008F3943 /* SearchViewCell.swift in Sources */,
 				5F3790E827FCC28B00AA9CAC /* SofaListView.swift in Sources */,
+				5F005D5F2806296800BCCA1E /* NetworkService.swift in Sources */,
 				5F3790DE27FCBD3400AA9CAC /* DataServiceProtocol.swift in Sources */,
+				5F3F53C22806030A008F3943 /* UserDetailsVC.swift in Sources */,
 				5F9160E227F33ABD009FBD63 /* SofaButton.swift in Sources */,
 				5FE0E57727F4E0B0007DF145 /* SofaTextField.swift in Sources */,
+				5FBFF9A828075EB4003FA41C /* UserSearchVC.swift in Sources */,
 				5F8459CB27DA46C400700029 /* AppDelegate.swift in Sources */,
 				5F8459CD27DA46C400700029 /* SceneDelegate.swift in Sources */,
 				5F3790E327FCBED600AA9CAC /* DateHeaderLabel.swift in Sources */,
+				5F005D5D280628BF00BCCA1E /* ErrorMessage.swift in Sources */,
+				5F3F53BE2805F586008F3943 /* NetworkVC.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -301,7 +353,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 15.2;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
 				ONLY_ACTIVE_ARCH = YES;
@@ -356,7 +408,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 15.2;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
 				SDKROOT = iphoneos;
@@ -454,6 +506,14 @@
 				minimumVersion = 5.0.0;
 			};
 		};
+		5FBFF9A9280762B7003FA41C /* XCRemoteSwiftPackageReference "SDWebImage" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/SDWebImage/SDWebImage";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 5.0.0;
+			};
+		};
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
@@ -461,6 +521,11 @@
 			isa = XCSwiftPackageProductDependency;
 			package = 5F9160DC27F33A41009FBD63 /* XCRemoteSwiftPackageReference "SnapKit" */;
 			productName = SnapKit;
+		};
+		5FBFF9AA280762B7003FA41C /* SDWebImage */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 5FBFF9A9280762B7003FA41C /* XCRemoteSwiftPackageReference "SDWebImage" */;
+			productName = SDWebImage;
 		};
 /* End XCSwiftPackageProductDependency section */
 	};
