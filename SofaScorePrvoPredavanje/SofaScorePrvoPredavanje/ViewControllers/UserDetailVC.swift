@@ -6,9 +6,14 @@
 //
 
 import UIKit
+import SwiftUI
 
 class UserDetailVC: UIViewController {
-    private var profileImageView = GitHubAvatarImageView(frame: CGRect(x: 0, y: 0, width: 80, height: 80))
+    private var avatarView = GitHubAvatarImageView(frame: CGRect(x: 0, y: 0, width: 80, height: 80))
+    private var usernameView = UILabel()
+    private var bioView = UILabel()
+    private var profileContainerView = UIView()
+    private var followersContainerView = UIView()
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -17,22 +22,142 @@ class UserDetailVC: UIViewController {
         addViews()
         styleViews()
         setupConstraints()
+        configureProfileContainerView()
     }
     
-    func addViews() {
-        view.addSubview(profileImageView)
+    private func addViews() {
+        view.addSubviews(avatarView, usernameView, bioView, profileContainerView, followersContainerView)
     }
     
-    func styleViews() {
-        profileImageView.image = UIImage(systemName: "person")
-        profileImageView.layer.cornerRadius = 10
+    private func configureProfileContainerView() {
+        let reposView = UILabel()
+        let gistsView = UILabel()
+        let buttonView = UIButton()
+        
+        profileContainerView.addSubviews(gistsView, reposView, buttonView)
+        
+        reposView.text = "Public Repos: 50"
+        gistsView.text = "Public Gists: 0"
+        buttonView.setTitle("View Profile", for: .normal)
+        buttonView.setTitleColor(.label, for: .normal)
+        buttonView.backgroundColor = .systemPurple
+        buttonView.layer.cornerRadius = 10
+        
+        reposView.font = UIFont.systemFont(ofSize: 18, weight: .semibold)
+        gistsView.font = UIFont.systemFont(ofSize: 18, weight: .semibold)
+        
+        reposView.snp.makeConstraints{
+            $0.leading.equalToSuperview().offset(18)
+            $0.top.equalToSuperview().offset(18)
+        }
+        
+        gistsView.snp.makeConstraints{
+            $0.trailing.equalToSuperview().offset(-18)
+            $0.top.equalTo(reposView)
+        }
+        
+        buttonView.snp.makeConstraints { 
+            $0.top.equalTo(gistsView.snp.bottom).offset(18)
+            $0.width.equalToSuperview().offset(-40)
+            $0.height.equalTo(40)
+            $0.centerX.equalToSuperview()
+        }
+        
     }
     
-    func setupConstraints() {
-        profileImageView.snp.makeConstraints { 
+    private func configureFollowersContainerView() {
+        let followersView = UILabel()
+        let followingView = UILabel()
+        let buttonView = UIButton()
+        
+        followersContainerView.addSubviews(followingView, followersView, buttonView)
+        
+        followersView.text = "Followers: 0"
+        followingView.text = "Following: 0"
+        buttonView.setTitle("Show Followers", for: .normal)
+        buttonView.setTitleColor(.label, for: .normal)
+        buttonView.backgroundColor = .systemBlue
+        buttonView.layer.cornerRadius = 10
+        
+        followersView.font = UIFont.systemFont(ofSize: 18, weight: .semibold)
+        followingView.font = UIFont.systemFont(ofSize: 18, weight: .semibold)
+        
+        followersView.snp.makeConstraints{
+            $0.leading.equalToSuperview().offset(18)
+            $0.top.equalToSuperview().offset(18)
+        }
+        
+        followingView.snp.makeConstraints{
+            $0.trailing.equalToSuperview().offset(-18)
+            $0.top.equalTo(followersView)
+        }
+        
+        buttonView.snp.makeConstraints { 
+            $0.top.equalTo(followingView.snp.bottom).offset(18)
+            $0.width.equalToSuperview().offset(-40)
+            $0.height.equalTo(40)
+        }
+        
+    }
+    
+    
+    private func styleViews() {
+        avatarView.image = UIImage(systemName: "person")
+        avatarView.layer.cornerRadius = 10
+        avatarView.layer.shadowRadius = 5
+        
+        usernameView.text = "lukavujnovac"
+        usernameView.font = UIFont.boldSystemFont(ofSize: 20)
+        
+        bioView.text = "software dev"
+        bioView.font = UIFont.systemFont(ofSize: 17, weight: .thin)
+        
+        profileContainerView.layer.borderColor = UIColor.red.cgColor
+    }
+    
+    private func setupConstraints() {
+        setupAvatarViewConstraints()
+        setupUsernameViewConstraints()
+        setupBioViewConstraints()
+        setupProfileContainerViewConstraints()
+        setupFollowersContainerViewConstraints()
+    }
+}
+
+private extension UserDetailVC {
+    func setupAvatarViewConstraints() {
+        avatarView.snp.makeConstraints { 
             $0.leading.equalToSuperview().offset(18)
             $0.top.equalTo(view.safeAreaLayoutGuide).offset(18)
             $0.width.height.equalTo(50)
+        }
+    }
+    
+    func setupUsernameViewConstraints() {
+        usernameView.snp.makeConstraints {         
+            $0.leading.equalTo(avatarView.snp.trailing).offset(18)
+            $0.top.equalTo(avatarView.snp.top).offset(5)
+        }
+    }
+    
+    func setupBioViewConstraints() {
+        bioView.snp.makeConstraints { 
+            $0.top.equalTo(avatarView.snp.bottom).offset(18)
+            $0.leading.equalTo(avatarView)
+        }
+    }
+    
+    func setupProfileContainerViewConstraints() {
+        profileContainerView.snp.makeConstraints { 
+            $0.top.equalTo(bioView).offset(18)
+            $0.leading.trailing.equalToSuperview().inset(18)
+        }
+    }
+    
+    func setupFollowersContainerViewConstraints() {
+        followersContainerView.snp.makeConstraints { 
+            $0.top.equalTo(profileContainerView).offset(50)
+            $0.leading.trailing.equalToSuperview().inset(18)
         }
     }
 }

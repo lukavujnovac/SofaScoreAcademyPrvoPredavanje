@@ -10,9 +10,10 @@ import Foundation
 class User: Codable {
     var login: String
     var avatarUrl: String
-    var followers: Int
-    var following: Int
+    var url: String
     var bio: String
+    var publicRepos: Int
+    var publicGists: Int
 }
 
 class Follower: Codable {
