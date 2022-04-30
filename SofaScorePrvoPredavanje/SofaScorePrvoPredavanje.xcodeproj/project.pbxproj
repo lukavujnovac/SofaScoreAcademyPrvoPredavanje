@@ -13,6 +13,15 @@
 		5F3790E127FCBEC300AA9CAC /* ChatMessage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F3790E027FCBEC300AA9CAC /* ChatMessage.swift */; };
 		5F3790E327FCBED600AA9CAC /* DateHeaderLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F3790E227FCBED600AA9CAC /* DateHeaderLabel.swift */; };
 		5F3790E827FCC28B00AA9CAC /* SofaListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F3790E727FCC28B00AA9CAC /* SofaListView.swift */; };
+		5F8339F9281D8E220099C2AD /* GitHubAvatarImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F8339F8281D8E220099C2AD /* GitHubAvatarImageView.swift */; };
+		5F8339FB281D8E4B0099C2AD /* NetworkMenager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F8339FA281D8E4B0099C2AD /* NetworkMenager.swift */; };
+		5F8339FD281D8E7F0099C2AD /* GitHubDataLoadingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F8339FC281D8E7F0099C2AD /* GitHubDataLoadingViewController.swift */; };
+		5F8339FF281D91430099C2AD /* Images.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F8339FE281D91430099C2AD /* Images.swift */; };
+		5F833A01281D916E0099C2AD /* K.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F833A00281D916E0099C2AD /* K.swift */; };
+		5F833A03281D91830099C2AD /* GitHubError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F833A02281D91830099C2AD /* GitHubError.swift */; };
+		5F833A05281D919A0099C2AD /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F833A04281D919A0099C2AD /* User.swift */; };
+		5F833A08281D92410099C2AD /* GitHubUsersVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F833A07281D92410099C2AD /* GitHubUsersVC.swift */; };
+		5F833A0A281D971C0099C2AD /* UserDetailVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F833A09281D971C0099C2AD /* UserDetailVC.swift */; };
 		5F8459CB27DA46C400700029 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F8459CA27DA46C400700029 /* AppDelegate.swift */; };
 		5F8459CD27DA46C400700029 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F8459CC27DA46C400700029 /* SceneDelegate.swift */; };
 		5F8459D427DA46C400700029 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5F8459D327DA46C400700029 /* Assets.xcassets */; };
@@ -32,6 +41,15 @@
 		5F3790E027FCBEC300AA9CAC /* ChatMessage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatMessage.swift; sourceTree = "<group>"; };
 		5F3790E227FCBED600AA9CAC /* DateHeaderLabel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DateHeaderLabel.swift; sourceTree = "<group>"; };
 		5F3790E727FCC28B00AA9CAC /* SofaListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SofaListView.swift; sourceTree = "<group>"; };
+		5F8339F8281D8E220099C2AD /* GitHubAvatarImageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GitHubAvatarImageView.swift; sourceTree = "<group>"; };
+		5F8339FA281D8E4B0099C2AD /* NetworkMenager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkMenager.swift; sourceTree = "<group>"; };
+		5F8339FC281D8E7F0099C2AD /* GitHubDataLoadingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GitHubDataLoadingViewController.swift; sourceTree = "<group>"; };
+		5F8339FE281D91430099C2AD /* Images.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Images.swift; sourceTree = "<group>"; };
+		5F833A00281D916E0099C2AD /* K.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = K.swift; sourceTree = "<group>"; };
+		5F833A02281D91830099C2AD /* GitHubError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GitHubError.swift; sourceTree = "<group>"; };
+		5F833A04281D919A0099C2AD /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
+		5F833A07281D92410099C2AD /* GitHubUsersVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GitHubUsersVC.swift; sourceTree = "<group>"; };
+		5F833A09281D971C0099C2AD /* UserDetailVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserDetailVC.swift; sourceTree = "<group>"; };
 		5F8459C727DA46C400700029 /* SofaScorePrvoPredavanje.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SofaScorePrvoPredavanje.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		5F8459CA27DA46C400700029 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		5F8459CC27DA46C400700029 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -60,6 +78,7 @@
 		5F01CE0827FB70D00028E3D0 /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				5F8339F8281D8E220099C2AD /* GitHubAvatarImageView.swift */,
 				5F3790E227FCBED600AA9CAC /* DateHeaderLabel.swift */,
 				5F01CE0627FB6B130028E3D0 /* SofaCell.swift */,
 				5F9160E127F33ABD009FBD63 /* SofaButton.swift */,
@@ -71,6 +90,7 @@
 		5F3790DF27FCBE9500AA9CAC /* DataServices */ = {
 			isa = PBXGroup;
 			children = (
+				5F8339FA281D8E4B0099C2AD /* NetworkMenager.swift */,
 				5F3790DB27FCBCD400AA9CAC /* MockData.swift */,
 				5F3790DD27FCBD3400AA9CAC /* DataServiceProtocol.swift */,
 			);
@@ -80,6 +100,7 @@
 		5F3790E427FCBEEC00AA9CAC /* Models */ = {
 			isa = PBXGroup;
 			children = (
+				5F833A04281D919A0099C2AD /* User.swift */,
 				5F3790E027FCBEC300AA9CAC /* ChatMessage.swift */,
 			);
 			path = Models;
@@ -93,9 +114,20 @@
 			path = SwiftUI;
 			sourceTree = "<group>";
 		};
+		5F833A06281D91CE0099C2AD /* Utillities */ = {
+			isa = PBXGroup;
+			children = (
+				5F8339FE281D91430099C2AD /* Images.swift */,
+				5F833A00281D916E0099C2AD /* K.swift */,
+				5F833A02281D91830099C2AD /* GitHubError.swift */,
+			);
+			path = Utillities;
+			sourceTree = "<group>";
+		};
 		5F8459BE27DA46C400700029 = {
 			isa = PBXGroup;
 			children = (
+				5F9160E427F341FF009FBD63 /* initalization */,
 				5F8459C927DA46C400700029 /* SofaScorePrvoPredavanje */,
 				5F8459C827DA46C400700029 /* Products */,
 			);
@@ -112,14 +144,14 @@
 		5F8459C927DA46C400700029 /* SofaScorePrvoPredavanje */ = {
 			isa = PBXGroup;
 			children = (
-				5F9160E427F341FF009FBD63 /* initalization */,
 				5F9160E327F341DC009FBD63 /* ViewControllers */,
-				5F9160DF27F33A9E009FBD63 /* UIView+Extenstion.swift */,
+				5F833A06281D91CE0099C2AD /* Utillities */,
 				5F3790EA27FCC8FC00AA9CAC /* SwiftUI */,
 				5F3790E427FCBEEC00AA9CAC /* Models */,
 				5F3790DF27FCBE9500AA9CAC /* DataServices */,
 				5F01CE0827FB70D00028E3D0 /* Views */,
 				5F8459D827DA46C400700029 /* Info.plist */,
+				5F9160DF27F33A9E009FBD63 /* UIView+Extenstion.swift */,
 			);
 			path = SofaScorePrvoPredavanje;
 			sourceTree = "<group>";
@@ -129,6 +161,9 @@
 			children = (
 				5F8459DE27DA4AA700700029 /* SearchVC.swift */,
 				5F8459E027DA4AB400700029 /* ProfileVC.swift */,
+				5F833A07281D92410099C2AD /* GitHubUsersVC.swift */,
+				5F833A09281D971C0099C2AD /* UserDetailVC.swift */,
+				5F8339FC281D8E7F0099C2AD /* GitHubDataLoadingViewController.swift */,
 			);
 			path = ViewControllers;
 			sourceTree = "<group>";
@@ -220,18 +255,27 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5F8339FB281D8E4B0099C2AD /* NetworkMenager.swift in Sources */,
 				5F8459E127DA4AB400700029 /* ProfileVC.swift in Sources */,
 				5F9160E027F33A9E009FBD63 /* UIView+Extenstion.swift in Sources */,
+				5F8339FF281D91430099C2AD /* Images.swift in Sources */,
+				5F833A03281D91830099C2AD /* GitHubError.swift in Sources */,
 				5F01CE0727FB6B130028E3D0 /* SofaCell.swift in Sources */,
 				5F8459DF27DA4AA800700029 /* SearchVC.swift in Sources */,
 				5F3790DC27FCBCD400AA9CAC /* MockData.swift in Sources */,
+				5F833A05281D919A0099C2AD /* User.swift in Sources */,
 				5F3790E127FCBEC300AA9CAC /* ChatMessage.swift in Sources */,
 				5F3790E827FCC28B00AA9CAC /* SofaListView.swift in Sources */,
+				5F833A01281D916E0099C2AD /* K.swift in Sources */,
 				5F3790DE27FCBD3400AA9CAC /* DataServiceProtocol.swift in Sources */,
 				5F9160E227F33ABD009FBD63 /* SofaButton.swift in Sources */,
+				5F8339FD281D8E7F0099C2AD /* GitHubDataLoadingViewController.swift in Sources */,
 				5FE0E57727F4E0B0007DF145 /* SofaTextField.swift in Sources */,
+				5F8339F9281D8E220099C2AD /* GitHubAvatarImageView.swift in Sources */,
 				5F8459CB27DA46C400700029 /* AppDelegate.swift in Sources */,
+				5F833A08281D92410099C2AD /* GitHubUsersVC.swift in Sources */,
 				5F8459CD27DA46C400700029 /* SceneDelegate.swift in Sources */,
+				5F833A0A281D971C0099C2AD /* UserDetailVC.swift in Sources */,
 				5F3790E327FCBED600AA9CAC /* DateHeaderLabel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

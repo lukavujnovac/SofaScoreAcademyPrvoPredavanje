@@ -25,7 +25,7 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
     
     func createTabBar() -> UITabBarController {
         let tabBar = UITabBarController()
-        tabBar.viewControllers = [createSearchNavigationViewController(), crateProfileNavigationViewController()]
+        tabBar.viewControllers = [createSearchNavigationViewController(), crateProfileNavigationViewController(), createGitHubUsersViewController()]
         tabBar.tabBar.tintColor = .systemPink
         
         return tabBar
@@ -47,6 +47,14 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         return UINavigationController(rootViewController: profileVC)
     }
 
+    func createGitHubUsersViewController() -> UINavigationController {
+        let gitHubUsersVC = GitHubUsersVC()
+        gitHubUsersVC.title = "Search Users"
+        gitHubUsersVC.tabBarItem = UITabBarItem(tabBarSystemItem: .contacts, tag: 0)
+        
+        return UINavigationController(rootViewController: gitHubUsersVC)
+    }
+    
     func sceneDidDisconnect(_ scene: UIScene) {
         // Called as the scene is being released by the system.
         // This occurs shortly after the scene enters the background, or when its session is discarded.
