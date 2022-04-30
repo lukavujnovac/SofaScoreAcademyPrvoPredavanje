@@ -17,4 +17,5 @@ class User: Codable {
 
 class Follower: Codable {
     var login: String
+    var url: String
 }

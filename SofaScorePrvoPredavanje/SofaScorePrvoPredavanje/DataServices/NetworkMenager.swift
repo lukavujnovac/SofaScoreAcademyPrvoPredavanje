@@ -25,7 +25,7 @@ class NetworkManager {
     private init() {}
     
     func getFollowers(for username: String, page: Int, completed: @escaping (Result<[Follower], GitHubError>) -> Void ) {
-        let endpoint = K.apiUrl + "/users/" + "\(username)"
+        let endpoint = K.apiUrl + "/users/" + "\(username)/followers"
         
         guard let url = URL(string: endpoint) else {
             completed(.failure(.invalidUsername))
@@ -54,7 +54,6 @@ class NetworkManager {
                 decoder.keyDecodingStrategy = .convertFromSnakeCase
                 let followers = try decoder.decode([Follower].self, from: data)
                 completed(.success(followers))
-                print(followers.count)
             } catch {
                 completed(.failure(.invalidData))
             }
