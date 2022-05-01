@@ -12,8 +12,8 @@ class UserDetailVC: UIViewController {
     private var avatarView = GitHubAvatarImageView(frame: CGRect(x: 0, y: 0, width: 80, height: 80))
     private var usernameView = UILabel()
     private var bioView = UILabel()
-    private var profileContainerView = UIView()
-    private var followersContainerView = UIView()
+    private var profileStackView = UIStackView()
+    private var followersStackView = UIStackView()
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -23,10 +23,11 @@ class UserDetailVC: UIViewController {
         styleViews()
         setupConstraints()
         configureProfileContainerView()
+        configureFollowersContainerView()
     }
     
     private func addViews() {
-        view.addSubviews(avatarView, usernameView, bioView, profileContainerView, followersContainerView)
+        view.addSubviews(avatarView, usernameView, bioView, profileStackView, followersStackView)
     }
     
     private func configureProfileContainerView() {
@@ -34,7 +35,7 @@ class UserDetailVC: UIViewController {
         let gistsView = UILabel()
         let buttonView = UIButton()
         
-        profileContainerView.addSubviews(gistsView, reposView, buttonView)
+        profileStackView.addSubviews(gistsView, reposView, buttonView)
         
         reposView.text = "Public Repos: 50"
         gistsView.text = "Public Gists: 0"
@@ -70,7 +71,7 @@ class UserDetailVC: UIViewController {
         let followingView = UILabel()
         let buttonView = UIButton()
         
-        followersContainerView.addSubviews(followingView, followersView, buttonView)
+        followersStackView.addSubviews(followingView, followersView, buttonView)
         
         followersView.text = "Followers: 0"
         followingView.text = "Following: 0"
@@ -96,6 +97,7 @@ class UserDetailVC: UIViewController {
             $0.top.equalTo(followingView.snp.bottom).offset(18)
             $0.width.equalToSuperview().offset(-40)
             $0.height.equalTo(40)
+            $0.centerX.equalToSuperview()
         }
         
     }
@@ -112,7 +114,10 @@ class UserDetailVC: UIViewController {
         bioView.text = "software dev"
         bioView.font = UIFont.systemFont(ofSize: 17, weight: .thin)
         
-        profileContainerView.layer.borderColor = UIColor.red.cgColor
+        profileStackView.axis = .vertical
+        profileStackView.spacing = 18
+        
+        followersStackView.axis = .vertical
     }
     
     private func setupConstraints() {
@@ -148,15 +153,15 @@ private extension UserDetailVC {
     }
     
     func setupProfileContainerViewConstraints() {
-        profileContainerView.snp.makeConstraints { 
-            $0.top.equalTo(bioView).offset(18)
+        profileStackView.snp.makeConstraints { 
+            $0.top.equalTo(bioView.snp.bottom).offset(50)
             $0.leading.trailing.equalToSuperview().inset(18)
         }
     }
     
     func setupFollowersContainerViewConstraints() {
-        followersContainerView.snp.makeConstraints { 
-            $0.top.equalTo(profileContainerView).offset(50)
+        followersStackView.snp.makeConstraints { 
+            $0.top.equalTo(profileStackView.snp.bottom).offset(150)
             $0.leading.trailing.equalToSuperview().inset(18)
         }
     }
