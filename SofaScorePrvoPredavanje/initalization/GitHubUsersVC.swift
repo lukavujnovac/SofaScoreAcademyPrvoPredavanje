@@ -54,12 +54,9 @@ class GitHubUsersVC: UIViewController, UISearchBarDelegate {
     }
     
     @objc private func didTapButton() {
-        let navVC = UINavigationController(rootViewController: UserDetailVC())
         fetchFollowers(text: searchBar.text ?? "")
         
         //collection view svih ljudi da ga mos kasnije reuse za followere
-        
-        present(navVC, animated: true)
     }
     
 //    func searchBarSearchButtonClicked(_ searchBar: UISearchBar) {

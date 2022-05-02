@@ -48,7 +48,7 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
     }
 
     func createGitHubUsersViewController() -> UINavigationController {
-        let gitHubUsersVC = GitHubUsersVC()
+        let gitHubUsersVC = GitHubAPIVC()
         gitHubUsersVC.title = "Search Users"
         gitHubUsersVC.tabBarItem = UITabBarItem(tabBarSystemItem: .contacts, tag: 0)
         
